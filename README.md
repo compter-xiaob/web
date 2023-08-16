@@ -1,23 +1,23 @@
-# web
-# 前端练手区
+# :earth_americas:Web
+## :pencil2:前端练手区
 
-## 文字云简单学习
+### **:cloud:**文字云简单学习
 
-### 使用HTML、CSS 和 Javascript 制作文字雨动画
+#### 使用HTML、CSS 和 Javascript 制作文字雨动画
 
 主体部分分为文字和云 以及倒影
 
 倒影部分可以在container容器的css样式加入
 
-```
+```css
 -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,transparent,transparent,#000500);
 ```
 
 PS：-webkit-box-reflect要考虑兼容性的问题
 
-云
+**:cloud:**云
 
-```
+```css
 /*Style.css*/
 //云底部用一个简单圆角矩形
 .cloud{
@@ -43,9 +43,9 @@ PS：-webkit-box-reflect要考虑兼容性的问题
 }
 ```
 
-文字雨部分
+:sweat_drops:文字雨部分
 
-```
+```javascript
 //简单随机创造一些文字
 function randomText(){
             const text = ("abcdefghijklmnopqrstuvwxyz0123456789");
@@ -78,7 +78,7 @@ setInterval(function(){
 
 最后添加一下动画即可完成
 
-```
+```css
 .text{
     position: absolute;
     height: 20px;
