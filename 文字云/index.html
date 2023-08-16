@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>text cloud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="cloud">
+
+        </div>
+    </div>
+    <script>
+        function randomText(){
+            const text = ("abcdefghijklmnopqrstuvwxyz0123456789");
+            letter = text[Math.floor(Math.random() * text.length)];
+            return letter;
+        }
+
+        function rain(){
+            let cloud = document.querySelector('.cloud');
+            let e = document.createElement('div');
+            let left = Math.floor(Math.random()*300)
+            let size = Math.random() * 1.5;
+            let duration = Math.random() * 1;
+            e.classList.add('text');
+            cloud.appendChild(e);
+            e.innerText = randomText();
+            e.style.left = left + 'px';
+            e.style.fontSize = 0.5 + size + 'em'
+            e.style.animationDuration = 1 + duration + 's';
+
+            setTimeout(() => {
+                cloud.removeChild(e)
+            }, 2000);
+        }
+        setInterval(function(){
+            rain();
+        },50)
+    </script>
+</body>
+</html>
